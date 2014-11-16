@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Zimp Fidelidade</title>
+
+	<style>
+		@charset "utf-8";
+
+		* {
+			box-sizing: border-box;
+			-moz-box-sizing: border-box:
+			font-family: Lucida;
+		}
+
+		outline { border:none; }
+
+		body {
+			min-width: 357px;
+			overflow-x: hidden;
+			margin: 0;
+			padding: 20px;
+		}
+
+		header {
+			float: left;
+			width: 100%;
+			border-bottom: 3px solid #1abc9c;
+			text-align: center;
+			padding: 0 0 10px 0;
+			margin-bottom: 15px;
+		}
+
+		header a {
+			color: #1abc9c;
+			text-decoration: none;
+			font: bold 24px/28px Arial, sans-serif;
+		}
+
+		label {
+			color: #2c3e50;
+			font: bold 14px/21px Arial, sans-serif;
+		}
+
+		input[type=url],
+		input[type=text],
+		textarea {
+			display: block;
+			border-radius: 6px;
+			width: 100%;
+			margin-bottom: 15px;
+			border: 2px solid #ebedee;
+			color: #7f8c8d;
+			font-size: 15px;
+			line-height: 1.467;
+			padding: 8px 12px;
+			outline: none;
+			box-sizing: border-box;
+			max-width: 100%;
+			min-width: 100%;
+			transition: border .25s linear, color .25s linear, background-color .25s linear;
+		}
+
+		textarea {
+			height: 120px;
+		}
+
+		input[type=url]:focus,
+		input[type=text]:focus,
+		textarea:focus {
+			border-color: #1abc9c;
+		}
+
+		input[type=submit] {
+			border-radius: 6px;
+			line-height: 22px;
+			width: 100%;
+			color: #ffffff;
+			background-color: #1abc9c;
+			transition: color 0.25s, background 0.25s;
+			border: none;
+			font-size: 16px;
+			font-weight: normal;
+			line-height: 1.4;
+			padding: 10px 15px;
+			-webkit-font-smoothing: subpixel-antialiased;
+			cursor:pointer;
+			outline: none;
+		}
+
+		input[type=submit]:hover {
+			background: #16a085;
+		}
+
+		#content {
+			float:left;
+			width: 100%;
+			position: relative;
+			min-height: 355px;
+			margin-bottom: 20px;
+		}
+
+		form.invisible {
+			display: none;
+		}
+
+		#sucesso {
+			opacity: 0;
+			top: -20px;
+			position: absolute;
+			color: #2c3e50;
+			font: bold 14px/21px Arial, sans-serif;
+			text-align: center;
+			transition: all .5s linear;
+		}
+
+		#sucesso.visible {
+			opacity: 1;
+			top: -10px;
+			transition: all .5s linear;
+		}
+
+	</style>
+
+</head>
+<body>
+	<iframe id="hIframe" name="hIframe" style="display: none;"></iframe>
+
+	<header>
+		<a href="http://startupweekly.com.br" target="_blank">StartupWeekly</a>
+	</header>
+
+	<div id="content">
+		<form action="https://docs.google.com/forms/d/1xQJndj3tLgARjVfeCr0OZwJCaRm5cdnwBcMSLQxhHwk/formResponse" method="POST" target="hIframe">
+			<label for="titulo">Titulo</label>
+			<input type="text" name="entry.310955505" id="titulo" aria-label="Titulo" aria-required="true" required>
+
+			<label for="url">Link</label>
+			<input type="url" name="entry.1461887542" id="url" aria-label="Url" aria-required="true" required>
+
+			<label for="observacoes">Alguma informação extra?</label>
+			<textarea name="entry.1852637709" name="observacoes" aria-label="Alguma informação extra?"></textarea>
+
+			<input type="submit" id="submit-btn" value="Enviar">
+		</form>
+
+		<div id="sucesso">
+			<h2>Obrigado por enviar a sua ideia!</h2>
+		</div>
+	</div>
+
+	<script src="main.js"></script>
+</body>
+</html>
