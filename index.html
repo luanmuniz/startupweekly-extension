@@ -88,7 +88,8 @@
 			outline: none;
 		}
 
-		input[type=submit]:hover {
+		input[type=submit]:hover,
+		input[type=submit]:focus {
 			background: #16a085;
 		}
 
@@ -133,15 +134,15 @@
 	<div id="content">
 		<form action="https://docs.google.com/forms/d/1xQJndj3tLgARjVfeCr0OZwJCaRm5cdnwBcMSLQxhHwk/formResponse" method="POST" target="hIframe">
 			<label for="titulo">Titulo</label>
-			<input type="text" name="entry.310955505" id="titulo" aria-label="Titulo" aria-required="true" required>
+			<input type="text" name="entry.310955505" id="titulo" aria-label="Titulo" aria-required="true" tabindex="3" required>
 
 			<label for="url">Link</label>
-			<input type="url" name="entry.1461887542" id="url" aria-label="Url" aria-required="true" required>
+			<input type="url" name="entry.1461887542" id="url" aria-label="Url" aria-required="true" tabindex="4" required>
 
 			<label for="observacoes">Alguma informação extra?</label>
-			<textarea name="entry.1852637709" name="observacoes" aria-label="Alguma informação extra?"></textarea>
+			<textarea name="entry.1852637709" name="observacoes" aria-label="Alguma informação extra?" tabindex="1"></textarea>
 
-			<input type="submit" id="submit-btn" value="Enviar">
+			<input type="submit" id="submit-btn" value="Enviar"  tabindex="2">
 		</form>
 
 		<div id="sucesso">
