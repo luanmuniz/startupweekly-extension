@@ -11,8 +11,6 @@ var StartupWeekly = {
 		chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 			document.querySelector('#url').value = tabs[0].url;
 			document.querySelector('#titulo').value = tabs[0].title;
-
-			console.log(tabs);
 		});
 	},
 
